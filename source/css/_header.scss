@@ -1,0 +1,28 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	background-color: white;
+	width: 100%;
+	padding: 20px 35px;
+	box-sizing: border-box;
+	&__container {
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__right {
+		display: flex;
+		align-items: center;
+	}
+	&__nav {
+		margin-right: 36px;
+	}
+	&__nav-item {
+		color: #1B1B1C;
+		font-weight: 500;
+		font-size: 15px;
+		text-decoration: none;
+		margin-left: 47px;
+	}
+}
