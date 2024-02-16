@@ -1,0 +1,23 @@
+.gallery {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 20px;
+	&__title {
+		display: none;
+	}
+	&__container {
+		display: grid;
+		grid-template-columns: 370px 370px 370px;
+		grid-gap: 30px;
+	}
+	&__col {
+		display: grid;
+		grid-template-rows: auto auto;
+		grid-gap: 30px;
+	}
+	&__img {
+		width: 100%;
+		height: auto;
+	}
+}
