@@ -104,8 +104,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	});
 
-	videoPlayer.addEventListener('pause', function() {
-		videoPlayButton.style.display = 'block';
-	});
-
 });
