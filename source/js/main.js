@@ -20,7 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		orderFormTitle = document.querySelector('.order__form-title'),
 		orderFormDesc = document.querySelector('.order__form-desc'),
 		orderFormFields = document.querySelector('.order__form-fileds'),
-		orderFormAgreement = document.querySelector('.order__form-agreement');
+		orderFormAgreement = document.querySelector('.order__form-agreement'),
+
+		videoPlayButton = document.querySelector('.video__play'),
+		videoPlayer = document.getElementById('video-player');
 
 	var switcherState = 'annual';	
 
@@ -91,6 +94,18 @@ document.addEventListener('DOMContentLoaded', function() {
 			});
 		});
 
+	});
+
+	//*** Видео ***
+
+	videoPlayButton.addEventListener('click', function() {
+		videoPlayer.play();
+		videoPlayButton.style.display = 'none';
+
+	});
+
+	videoPlayer.addEventListener('pause', function() {
+		videoPlayButton.style.display = 'block';
 	});
 
 });
