@@ -10,6 +10,7 @@
 
 	<header class="header">
 		<div class="header__container">
+			<div class="header__logo"></div>
 			<div class="header__right">
 				<nav class="header__nav">
 					<a href="#" class="header__nav-item">Изображения</a>
@@ -18,6 +19,9 @@
 				</nav>
 				<button class="btn btn-login">Войти</button>
 			</div>
+			<button class="header__hamburger">
+				<svg viewBox="0 0 45 45" class="header__hamburger-icon"><use xlink:href="icons/stack/icons.svg#hamb">
+			</button>
 		</div>	
 	</header>
 	
@@ -140,19 +144,25 @@
 		</div>
 	</section>
 
-	<div class="order">
-		<form action="" class="order__form">
-				<div class="order__form-title">Оставить заявку</div>
-				<p class="order__form-desc">
-					Менеджеры перезвонят или напишут в течение дня. Поможем определиться и протестировать продукт. Без спама и навязчивости
-				</p>
-				<input type="email" class="order__form-input" name="email" id="email" placeholder="Email">
-				<input type="text" class="order__form-input" name="name" id="name" placeholder="Иван Иванов">
-				<input type="tel" class="order__form-input" name="phone" id="phone" placeholder="Телефон">
-				<input type="submit" value="Отправить">
-				<input type="checkbox" id="agreement" >
-				<label for="agreement">Я соглашаюсь на обработку персональных данных и присоединяюсь к регламенту СБИС</label>
-		</form>
+	<div class="order-overlay">
+		<div class="order">
+			<form action="" class="order__form">
+					<h2 class="order__form-title">Оставить заявку</h2>
+					<p class="order__form-desc">
+					Менеджеры перезвонят или напишут в течение дня.<br>Поможем определиться и протестировать продукт.<br>Без спама и навязчивости
+					</p>
+					<div class="order__form-fileds">
+						<input type="email" class="order__form-input" name="email" id="email" placeholder="Email">
+						<input type="text" class="order__form-input" name="name" id="name" placeholder="Иван Иванов">			
+						<input type="tel" class="order__form-input" name="phone" id="phone" placeholder="Телефон">
+						<input type="submit" class="btn order__form-submit" value="Отправить">
+					</div>
+					<div class="order__form-agreement">
+						<input type="checkbox" id="agreement" class="order__form-checkbox">
+						<label for="agreement">Я соглашаюсь на обработку персональных данных и присоединяюсь к регламенту СБИС</label>
+					</div>	
+			</form>
+		</div>	
 	</div>
 
 

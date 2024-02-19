@@ -1,18 +1,36 @@
 .hero {
 	position: relative;
-	background-image: url('../images/header.png');
+	background-image: url('../images/header.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	height: 952px;
+	padding: 0 20px;
+
+	@media (max-width: 767px) {
+		height: 600px;		
+	}
+
 	&__text {
 		position: relative;
 		left: calc(215px / 1400px * 100%);
 		top: 480px;
 		color: white;
 		max-width: 830px;
-	}
-	&__title {
+
+		@media (max-width: 1070px) {
+			left: 50%;
+			transform: translate(-50%);
+		}
+
+		@media (max-width: 960px) {
+			position: absolute;
+			width: 80%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
 	}
 	&__desc {
 		margin-top: 24px;
@@ -20,5 +38,14 @@
 		font-size: 22px;
 		line-height: 32px;
 		font-weight: 500;
+
+		@media (max-width: 960px) {
+			margin: 24px auto 0 auto;
+		}
+
+		@media (max-width: 767px) {
+			font-size: 18px;
+			line-height: 27px;
+		}
 	}
 }

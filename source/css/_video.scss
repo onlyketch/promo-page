@@ -1,6 +1,10 @@
 .video {
 	background-color: #222228;
 	padding: 100px 20px 143px 20px;
+
+	@media (max-width: 767px) {
+		padding: 50px 20px;
+	}
 	&__title {
 		color: white;
 		text-align: center;
@@ -32,20 +36,39 @@
 		padding: 24px 25px 26px 29px;
 	}
 	&__play-icon {
+		width: 16px;
+		height: 16px;
 	}
 	&__previews {
 		display: flex;
 		justify-content: center;
 		margin-top: 90px;
+
+		@media (max-width: 767px) {
+			justify-content: space-around;
+			align-items: flex-start;
+			margin-top: 30px;
+		}
 	}
 	&__prev {
 		display: flex;
 		margin: 0 27px;
+
+		@media (max-width: 767px) {
+			flex-direction: column;
+			margin: 0 0 0 10px;
+
+		}
 	}
 	&__prev-link {
 		display: block;
 		width: 170px;
 		height: 110px;
+
+		@media (max-width: 767px) {
+			width: 120px;
+			height: 77px;
+		}
 	}
 	&__prev-img {
 		width: 100%;
@@ -54,6 +77,10 @@
 	&__prev-text {
 		max-width: 200px;
 		margin: 2px 0 0 30px;
+
+		@media (max-width: 767px) {
+			margin: 15px 0 0 0;
+		}
 	}
 	&__prev-name {
 		font-weight: 700;
@@ -62,11 +89,22 @@
 		line-height: 26px;
 		letter-spacing: 2px;
 		text-transform: uppercase;
+
+		@media (max-width: 767px) {
+			font-size: 11px;
+			line-height: 18px;
+		}
 	}
 	&__prev-desc {
 		margin-top: 11px;
 		color: #979797;
 		font-size: 16px;
 		line-height: 26px;
+
+		@media (max-width: 767px) {
+			margin-top: 5px;
+			font-size: 14px;
+			line-height: 21px;
+		}
 	}
 }

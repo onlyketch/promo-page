@@ -3,21 +3,34 @@
 	justify-content: center;
 	align-items: center;
 	padding: 100px 20px;
+
+	@media (max-width: 767px) {
+		padding: 50px 20px;
+	}
 	&__title {
 		display: none;
 	}
 	&__container {
 		display: grid;
-		grid-template-columns: 370px 370px 370px;
+		grid-template-columns: repeat(3, minmax(100px, 370px));
+		align-items: center;
 		grid-gap: 30px;
+
+		@media (max-width: 767px) {
+			grid-gap: 10px;
+		}
 	}
 	&__col {
 		display: grid;
 		grid-template-rows: auto auto;
 		grid-gap: 30px;
+
+		@media (max-width: 767px) {
+			grid-gap: 10px;
+		}
 	}
 	&__img {
 		width: 100%;
-		height: auto;
+		height: 100%;
 	}
 }
