@@ -6,23 +6,29 @@
 	<title>Превратите свои идеи в реальные достижения</title>
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body id="body">
 
 	<header class="header">
 		<div class="header__container">
 			<div class="header__logo"></div>
 			<div class="header__right">
 				<nav class="header__nav">
-					<a href="#" class="header__nav-item">Изображения</a>
-					<a href="#" class="header__nav-item">Видео</a>
-					<a href="#" class="header__nav-item">3D модели</a>
+					<a href="#to_images" class="header__nav-item">Изображения</a>
+					<a href="#to_video" class="header__nav-item">Видео</a>
+					<a href="#to_3d" class="header__nav-item">3D модели</a>
 				</nav>
 				<button class="btn btn-login">Войти</button>
 			</div>
-			<button class="header__hamburger">
+			<button class="header__hamburger" id="hamburger">
 				<svg viewBox="0 0 45 45" class="header__hamburger-icon"><use xlink:href="icons/stack/icons.svg#hamb">
 			</button>
-		</div>	
+		</div>
+		<nav class="header__nav-mobile">
+			<a href="#to_images" class="header__nav-mobile-item">Изображения</a>
+			<a href="#to_video" class="header__nav-mobile-item">Видео</a>
+			<a href="#to_3d" class="header__nav-mobile-item">3D модели</a>
+			<a href="#" class="header__nav-mobile-item">Войти</a>
+		</nav>	
 	</header>
 	
 	<div class="hero">
@@ -32,7 +38,7 @@
 		</div>
 	</div>
 
-	<section class="gallery">
+	<section class="gallery" id="to_images">
 		<h2 class="gallery__title">Изображения</h2>
 		<div class="gallery__container">
 			<div class="gallery__col">
@@ -50,7 +56,7 @@
 		</div>
 	</section>
 
-	<section class="video">
+	<section class="video" id="to_video">
 		<h2 class="video__title">Поможем сделать ваш продукт уникальным</h2>
 		<div class="video__container">
 			<div class="video__main">
@@ -80,13 +86,13 @@
 		</div>
 	</section>
 
-	<section class="product">
+	<section class="product" id="to_3d">
 		<div class="product__container">
 			<div class="product__content">
 				<div class="product__info">
 					<h2 class="product__title">Создавайте свои сайты в пару кликов</h2>
 					<p class="product__desc">Мы создали новый продукт, который поможет дизайнерам, разработчикам и небольшим 	стартапам создать свой сайт быстро и просто.</p>
-					<button class="btn btn-more">Подробнее</button>
+					<button class="btn btn-more" id="more-btn">Подробнее</button>
 				</div>	
 				<div class="product__tech">
 					<div class="product__tech-item">
@@ -121,10 +127,10 @@
 					<div class="plans__detail-box">
 						<div class="plans__detail-head">
 							<div class="plans__detail-name">Оптимальный</div>
-							<div class="plans__detail-price">500&#8381;</div>
+							<div class="plans__detail-price" id="price-opt">500&#8381;</div>
 						</div>
 						<p class="plans__detail-desc">Редактируйте фото и видео в режиме онлайн. Создавайте одностраничные сайты  из 	готовых компонентов</p>
-						<button class="btn plans__detail-btn">Начать бесплатно</button>
+						<button class="btn plans__detail-btn" id="optimal-btn">Начать бесплатно</button>
 					</div>	
 				</div>
 			</div>
@@ -134,10 +140,10 @@
 					<div class="plans__detail-box">
 						<div class="plans__detail-head">
 							<div class="plans__detail-name">Профи</div>
-							<div class="plans__detail-price">1000&#8381;</div>
+							<div class="plans__detail-price" id="price-prof">1000&#8381;</div>
 						</div>
 						<p class="plans__detail-desc">Редактируйте фото и видео в режиме онлайн. Создавайте одностраничные и 	многостраничные сайты  из готовых компонентов,</p>
-						<button class="btn plans__detail-btn btn-outline">Начать бесплатно</button>
+						<button class="btn plans__detail-btn btn-outline" id="profi-btn">Начать бесплатно</button>
 					</div>	
 				</div>
 			</div>
@@ -152,15 +158,18 @@
 					Менеджеры перезвонят или напишут в течение дня.<br>Поможем определиться и протестировать продукт.<br>Без спама и навязчивости
 					</p>
 					<div class="order__form-fileds">
-						<input type="email" class="order__form-input" name="email" id="email" placeholder="Email">
-						<input type="text" class="order__form-input" name="name" id="name" placeholder="Иван Иванов">			
-						<input type="tel" class="order__form-input" name="phone" id="phone" placeholder="Телефон">
+						<input type="email" class="order__form-input" name="email" id="email" placeholder="Email" required>
+						<input type="text" class="order__form-input" name="name" id="name" placeholder="Иван Иванов" required minlength="3" maxlength="25">			
+						<input type="phone" class="order__form-input" name="phone" id="phone" placeholder="Телефон" required>
 						<input type="submit" class="btn order__form-submit" value="Отправить">
 					</div>
 					<div class="order__form-agreement">
-						<input type="checkbox" id="agreement" class="order__form-checkbox">
-						<label for="agreement">Я соглашаюсь на обработку персональных данных и присоединяюсь к регламенту СБИС</label>
+						<input type="checkbox" id="agreement" class="order__form-checkbox" required>
+						<label for="agreement" class="order__form-label">Я соглашаюсь на обработку персональных данных и присоединяюсь к регламенту СБИС</label>
 					</div>	
+					<button class="order__close" id="order-close">
+						<svg viewBox="0 0 25 25" class="order__close-icon"><use xlink:href="icons/stack/icons.svg#close">
+					</button>
 			</form>
 		</div>	
 	</div>
@@ -172,6 +181,6 @@
 
 
 
-
+	<script src="js/main.js"></script>
 </body>
 </html>

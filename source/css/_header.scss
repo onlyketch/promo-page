@@ -2,7 +2,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 4;
+	z-index: 3;
 	background-color: white;
 	width: 100%;
 	padding: 20px 35px;
@@ -52,5 +52,38 @@
 		@media (max-width: 767px) {
 			display: block;
 		}
+	}
+
+	&__nav-mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		height: 0px;
+		padding: 0;
+		box-sizing: border-box;
+		transition: height .3s linear;
+	}
+	&__nav-mobile-item {
+		display: flex;
+		align-items: center;
+		flex: 1 0 auto;
+		color: #1B1B1C;
+		font-weight: 500;
+		font-size: 15px;
+		text-decoration: none;
+		border-bottom: 1px dashed #ABABAB;
+		width: 100%;
+		opacity: 0;
+		height: 0px;
+		transition: all .3s linear;
+	}
+
+	&__nav-mobile_on {
+		height: 170px;
+		padding: 20px 0;
+	}
+	&__nav-mobile-item_on {
+		height: auto;
+		opacity: 1;
 	}
 }

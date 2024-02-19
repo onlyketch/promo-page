@@ -32,6 +32,8 @@
 		box-sizing: border-box;
 		padding: 3px;
 		cursor: pointer;
+		transition: background-color .3s linear;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	}
 	&__switcher-state {
 		width: 24px;
@@ -39,6 +41,7 @@
 		border-radius: 50%;
 		background-color: white;
 		transform: translate(12px);
+		transition: transform .3s linear;
 	}
 	&__container {
 		display: flex;
