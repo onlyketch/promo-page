@@ -152,7 +152,7 @@
 
 	<div class="order-overlay">
 		<div class="order">
-			<form action="" class="order__form">
+			<form class="order__form">
 					<h2 class="order__form-title">Оставить заявку</h2>
 					<p class="order__form-desc">
 					Менеджеры перезвонят или напишут в течение дня.<br>Поможем определиться и протестировать продукт.<br>Без спама и навязчивости
@@ -160,7 +160,7 @@
 					<div class="order__form-fileds">
 						<input type="email" class="order__form-input" name="email" id="email" placeholder="Email" required>
 						<input type="text" class="order__form-input" name="name" id="name" placeholder="Иван Иванов" required minlength="3" maxlength="25">			
-						<input type="phone" class="order__form-input" name="phone" id="phone" placeholder="Телефон" required>
+						<input type="tel" class="order__form-input" name="phone" id="phone" placeholder="Телефон" required>
 						<input type="submit" class="btn order__form-submit" value="Отправить">
 					</div>
 					<div class="order__form-agreement">
@@ -168,7 +168,7 @@
 						<label for="agreement" class="order__form-label">Я соглашаюсь на обработку персональных данных и присоединяюсь к регламенту СБИС</label>
 					</div>	
 					<button class="order__close" id="order-close">
-						<svg viewBox="0 0 25 25" class="order__close-icon"><use xlink:href="icons/stack/icons.svg#close">
+						<svg viewBox="0 0 25 25" class="order__close-icon"><use xlink:href="icons/stack/icons.svg#close"></use></svg>
 					</button>
 			</form>
 		</div>	
